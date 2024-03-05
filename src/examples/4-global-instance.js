@@ -5,7 +5,8 @@ const randomUserUrl = "https://randomuser.me/api";
 
 const GlobalInstance = () => {
   const fetchData = async () => {
-    console.log("global axios instance");
+    const response = await axios(productsUrl);
+    console.log(response);
   };
 
   useEffect(() => {
