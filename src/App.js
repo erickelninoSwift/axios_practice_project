@@ -1,11 +1,12 @@
 import Title from "./components/Title";
-import FirstRequest from "./examples/1-first-request";
+// import FirstRequest from "./examples/1-first-request";
+import Setup from "./examples/3-post-request";
 
 function App() {
   return (
     <main>
       <Title />
-      <FirstRequest />
+      <Setup />
     </main>
   );
 }
