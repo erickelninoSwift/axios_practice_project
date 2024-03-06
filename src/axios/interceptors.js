@@ -1,12 +1,12 @@
 import axios from "axios";
 
-const dataToFecth = axios.create({
+const dataFetch = axios.create({
   baseURL: "https://course-api.com",
 });
 
-dataToFecth.interceptors.request.use(
+dataFetch.interceptors.request.use(
   (request) => {
-    request.headers.common["Accept"] = "application/json";
+    request.headers["Accept"] = "application/json";
     console.log("request was sent");
     return request;
   },
@@ -15,7 +15,7 @@ dataToFecth.interceptors.request.use(
   }
 );
 
-dataToFecth.interceptors.response.use(
+dataFetch.interceptors.response.use(
   (response) => {
     console.log("We got the response");
     return response;
@@ -25,4 +25,4 @@ dataToFecth.interceptors.response.use(
   }
 );
 
-export default dataToFecth;
+export default dataFetch;
